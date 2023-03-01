@@ -1,7 +1,53 @@
+//////////// HW 2 /////////////////////
+
+const fs2 = require('node:fs/promises');
+const path2 = require('node:path');
+const path = require("path");
+
+
+const wolker = async () =>{
+    try{
+        const files = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt', 'file5.txt'];
+        const folders = ['folder1', 'folder2', 'folder3', 'folder4', 'folder5'];
+
+        for (const folder of folders) {
+            await fs2.mkdir(path.join(('HW2'),folder), {recursive: true});
+        }
+
+        for (const file of files) {
+            await fs2.writeFile(path.join(('HW2'), file), 'hello spring');
+        }
+
+        const filesAll = await fs2.readdir(path.join('HW2'));
+        console.log(filesAll);
+
+        for (const fileAll of filesAll) {
+            const stat = await fs2.stat(path.join(('HW2')), fileAll);
+            const isFile = stat.isFile();
+            if (isFile){
+                console.log( 'this is file: ', path.join(('HW2')), fileAll)
+            } else {
+                console.log( 'this is directory: ', path.join(('HW2')), fileAll)
+            }
+        }
+    }catch (e) {
+        console.error(e.message)
+    }
+
+}
+
+
+wolker();
+
+
+
+
+
+
 // --HW--
 
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
 // fs.mkdir(path.join(process.cwd(), 'HW'), (err)=>{
 //     if (err) throw new Error()
@@ -126,53 +172,6 @@ const path = require('path');
 // //     console.log(stats.isDirectory());
 // //     console.log(stats.isFile())
 // // })
-
-
-
-
-
-
-
-
-
-
-
-
- // fs.mkdir(path.join(process.cwd(), 'H_W'), (err)=>{
- //    if (err) throw new Error()
- // })
-
-// const homeWork = async () =>{
-//     try {
-//         const files = ['file1', 'file2', 'file3', 'file4', 'file5'];
-//         const folders = ['folder1', 'folder2', 'folder3', 'folder4'];
-//
-//        const promises = folders.map(async (folder, index) => {
-//            const foldersPath = path.join('H_M', folder)
-//
-//            await fs.mkdir(folder, {recursive: true});
-//            await fs.writeFile(path.join((foldersPath, files[index]), 'Say HI!!!');
-//         })
-//         console.log(promises);
-//
-//            const await = await Promise.
-//
-//     }catch (e) {
-// }}
-//
-//
-//
-
-// const work = async ()=> await fs.stat(path.join(process.cwd(), 'app.txt'))
-// const isFile = work.isFile();
-// console.log(work);
-// console.log(isFile);
-
-
-
-
-
-
 
 
 
