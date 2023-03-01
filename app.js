@@ -6,11 +6,11 @@ const path = require('path');
 // fs.mkdir(path.join(process.cwd(), 'HW'), (err)=>{
 //     if (err) throw new Error()
 // })
-//
+
 // fs.mkdir(path.join('HW', 'folder1'), (err)=>{
 //     if (err) throw new Error()
 // })
-//
+
 // fs.mkdir(path.join('HW', 'folder2'), (err)=>{
 //     if (err) throw new Error()
 // })
@@ -200,13 +200,13 @@ const path = require('path');
 // --PATH --
 
 // const path = require('path');
-
+//
 // const joinedPath = path.join(__dirname,'test', 'test.js');
 // console.log(joinedPath);
 
 // const normalizedPath = path.normalize('///test////test2//test.txt');
 // console.log(normalizedPath);
-
+//
 // const resolved = path.resolve('test', 'test.js');
 // console.log(resolved);
 
@@ -223,7 +223,7 @@ const path = require('path');
 // fs.writeFile(path.join('test','text3.txt'), 'hello from Okten', (err)=>{
 //     if (err) throw new Error(err.message)
 // })
-//
+
 
 // fs.readFile(path.join(__dirname,'test','text.txt', (err, data) => {
 //     if (err) throw new Error();
@@ -241,7 +241,7 @@ const path = require('path');
 // fs.unlink(path.join('test', 'text2.txt'), (err)=>{
 //     if (err) throw new Error();
 // })
-
+//
 // fs.stat(path.join('test'), (err, stats)=>{
 //     if (err) throw new Error();
 //     console.log(stats.isDirectory());
