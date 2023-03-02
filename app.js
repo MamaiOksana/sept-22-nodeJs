@@ -1,4 +1,4 @@
-//////////// HW 2 /////////////////////
+//////////// HW 2 //////////////////////
 
 const fs2 = require('node:fs/promises');
 const path2 = require('node:path');
