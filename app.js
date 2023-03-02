@@ -7,3 +7,4 @@ eventEmitter.on('click', ()=>{
 });
 
 eventEmitter.emit('click')
+eventEmitter.emit('click')
